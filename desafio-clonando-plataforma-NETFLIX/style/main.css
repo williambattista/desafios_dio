@@ -1,0 +1,117 @@
+:root{
+    --vermelho: #D50914; /*declarando variáveis*/
+    --preto: #141414;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* limite vai ser a borda da caixa.*/
+}
+
+
+/*elementos bases*/
+body{
+    background: var(--preto);
+    font-family: 'Arial', Times, serif;
+    color: white;
+}
+
+main .titulo {
+    color: #d0b209;
+}
+main .titulo2 {
+    color: #d0b209;
+}
+
+header .container { /*o header é um elemento e container é uma classe. Esse elemento é visto como uma caixa/box*/
+    /*border: 1px solid black;*/ 
+    display: flex; /* alinha os elementos em box */
+    flex-direction: row; /*direção em linha*/
+    align-items: center; /*alinha os items no centro*/
+    justify-content: space-between; /*aonde está localizado*/
+}
+
+header .logo {
+    margin-left: 5px; /*margem a esquerda*/
+    color: var(--vermelho); /*cor da class .logo*/
+    font-family: 'Arial Black', Times; /*familia de font padrão para essa class*/
+    font-size: 40px; /* fonte do elemento*/
+    
+}
+header nav a{
+    text-decoration: none; /* decoração presente no texto. none = nenhuma*/
+    color: #AAA; 
+    margin-right: 10px; /*magem direita*/
+}
+
+header nav a:hover { /* cria um efeito quando o mouse passa por cima do texto*/
+    color: #fff;
+}
+
+/*filme principal*/
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)), url('/img/Capa\ de\ O\ Senhor\ dos\ Aneis\ 1.jpg'); /*coloca uma imagem*/
+
+    height: 600px; /*tamanho da imagem*/
+    background-size: cover; /*especifica o tamanhp da imagem na caixa*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /*segue a mesma direção do flex-direction*/
+    align-items: flex-start; /*começar da esquerda*/
+}
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.descricao {
+    justify-items: right;
+}
+
+.titulo {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+
+.botao {
+    background-color: rgba(0,0,0,.50);
+    border: none;
+    color: white;
+
+    padding: 15px 30px; 
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer; /*muda o cursor*/
+    transition: .3s; /*transição para efeito*/
+}
+.botao:hover { /* cria um efeito quando o mouse passa por cima do texto*/
+    background-color: white;
+    color: black;
+}
+.botao i{
+    margin-right: 5px;
+}
+
+.container {
+    padding-left: 20px;
+}
+
+.filme-principal .container {
+    width: 70%;
+    justify-content: left;
+}
+
+.box-filmes { /* classe para tratar as imagens do carrocel*/
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
+}
